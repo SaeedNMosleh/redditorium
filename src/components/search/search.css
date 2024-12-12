@@ -1,0 +1,12 @@
+.search__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.searchButton{
+    font-family: var(--font-family);
+    font-size: 16px;      
+}
+
