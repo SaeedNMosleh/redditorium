@@ -15,7 +15,9 @@ function App() {
     <div className="App">
       <Header/>
       <Search/>
-      {!subredditName ? <TopicsCollection /> : <PostsCollection />}
+      <TopicsCollection />
+      {subredditName && <PostsCollection />}
+      
     </div>
   );
 }
