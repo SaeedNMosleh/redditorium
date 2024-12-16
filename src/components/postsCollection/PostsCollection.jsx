@@ -30,16 +30,21 @@ const PostsCollection = () => {
     fetchSubredditPosts();    
   }, [subredditName]);
 
+  const openComments = () => {
+    console.log("Clicked on the post");
+  };
+
 
   return (
     <div className='postscollection__container section__padding'>
       {subredditPosts.length > 0 && subredditPosts.map((eachpost, index) => (
         <Post key={index} subreddit_name_prefixed={eachpost.subreddit_name_prefixed} 
           title={eachpost.title} selftext={eachpost.selftext} num_comments={eachpost.num_comments} 
-          ups={eachpost.ups} downs={eachpost.downs}/>
+          ups={eachpost.ups} downs={eachpost.downs} onClick={openComments}/>
       ))} 
     </div>
   )
 }
 
 export default PostsCollection
+

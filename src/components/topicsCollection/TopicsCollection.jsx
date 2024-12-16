@@ -33,8 +33,8 @@ useEffect(() => {
 
   
   return (
-    <div className='topicscollections__container section__padding'>
-      {!sideVisible && subreddits.length > 0 && subreddits.map((subreddit, index) => (
+    <div className={`section__padding ${sideVisible ? 'topicscollections__container_side' : 'topicscollections__container_main'}`}>
+      {subreddits.length > 0 && subreddits.map((subreddit, index) => (
         <Topic key={index} name_prefixed={subreddit.display_name_prefixed}
           icon_img={subreddit.icon_img?subreddit.icon_img:reddit_logo} title={subreddit.title} 
           public_description={subreddit.public_description} 

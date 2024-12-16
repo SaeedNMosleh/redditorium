@@ -1,6 +1,12 @@
-.topicscollections__container{
+.topicscollections__container_main{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 20px;
+    width: 100%;
+}
+
+.topicscollections__container_side{
+    float: left;
+    width: 150px;
 }
