@@ -1,9 +1,10 @@
 import React from 'react'
 import './topic.css'
 
-function Topic({name_prefixed, icon_img, title, public_description, onClick}) {
+
+function Topic({name_prefixed, icon_img, title, public_description, sideVisible, onClick}) {
   return (
-    <div className='topic__container section__padding' onClick={onClick}>
+    <div className= {`section__padding ${sideVisible ? 'topic__container-selected' : 'topic__container'}`} onClick={onClick}>
        <div className='topic__container-header'>
          <img src={icon_img} alt='icon'/>
          <p>{name_prefixed}</p>
