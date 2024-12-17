@@ -13,13 +13,13 @@ function TopicsCollection() {
 const dispatch = useDispatch();
 const [subreddits, setSubreddits] = useState([]);
 const [sideVisible, setSideVisible] = useState(false);
+const [selectedSubreddit, setSelectedSubreddit] = useState(null);
 
 const API_ROOT = 'https://www.reddit.com';
 
 const getSubreddits = async () => {
   const response = await fetch(`${API_ROOT}/subreddits.json`);
   const json = await response.json();
-  console.log(json);
   return json.data.children.map((subreddit) => subreddit.data);
 };
 
@@ -37,11 +37,12 @@ useEffect(() => {
       {subreddits.length > 0 && subreddits.map((subreddit, index) => (
         <Topic key={index} name_prefixed={subreddit.display_name_prefixed}
           icon_img={subreddit.icon_img?subreddit.icon_img:reddit_logo} title={subreddit.title} 
-          public_description={subreddit.public_description} 
+          public_description={subreddit.public_description}
+          sideVisible={(sideVisible && selectedSubreddit===subreddit.display_name)?true:false} 
           onClick={()=> {
             dispatch(setPosts({subredditName: subreddit.display_name, posts: []}));
             setSideVisible(true);
-            console.log("Clicked:", subreddit.display_name);       
+            setSelectedSubreddit(subreddit.display_name);                  
           }}
         /> 
       ))}                

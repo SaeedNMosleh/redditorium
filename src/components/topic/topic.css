@@ -10,8 +10,22 @@
     cursor: pointer;
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     border-radius: 20px;
-    background-color: rgba(210, 210, 210, 0.9);
-    background-image: linear-gradient(161deg, rgba(210, 210, 210, 0.9) 100%, rgba(2, 26, 35, 1) 100%);
+    background-image: linear-gradient(to top, #6f6f9b, #6a6bb0, #6567c4, #5e62d8, #565dec);
+}
+
+.topic__container-selected{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;    
+    width: 400px;
+    height: 200px;
+    
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 8px 8px 24px 0px rgb(69, 90, 66);
+    border-radius: 20px;
+    background-image: linear-gradient(to top, #29d838, #6ede38, #98e33d, #bbe748, #d9ec56);
 }
 
 .topic__container-name{
