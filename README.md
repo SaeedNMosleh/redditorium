@@ -1,4 +1,4 @@
 # Redditorium
 
 React Project from CodeCademy Course for Front End
-(Wokr in progress -> UI imporvmeent is pending)
+(Work in progress -> UI improvement is pending)
